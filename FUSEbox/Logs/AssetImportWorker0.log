@@ -99,3 +99,4 @@ Received Import Request.
 Start importing Assets/Sprites/second bu logo.png using Guid(84ffffc6f675af74683e01727456472d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab159261cf9fd18131adef10f192daf') in 0.016192 seconds
   Import took 0.020066 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
