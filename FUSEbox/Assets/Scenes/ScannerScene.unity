@@ -199,13 +199,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888656445
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +288,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 888656448}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1264137586}
+        m_TargetAssemblyTypeName: ScannerBehaviour, Assembly-CSharp
+        m_MethodName: OnClickScan
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &888656448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fad7b035212f5439c3457be7bad63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RawImageBackground: {fileID: 2027222736}
+  AspectRatioFilter: {fileID: 2027222738}
+  textOut: {fileID: 2106214775}
+  scanZone: {fileID: 1106338875}
 --- !u!1 &1642241136
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +641,7 @@ GameObject:
   - component: {fileID: 2027222735}
   - component: {fileID: 2027222737}
   - component: {fileID: 2027222736}
+  - component: {fileID: 2027222738}
   m_Layer: 5
   m_Name: BackgroundRawImage
   m_TagString: Untagged
@@ -647,7 +664,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -686,6 +703,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027222734}
   m_CullTransparentMesh: 1
+--- !u!114 &2027222738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027222734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 4
+  m_AspectRatio: 1.7777778
 --- !u!1 &2106214773
 GameObject:
   m_ObjectHideFlags: 0

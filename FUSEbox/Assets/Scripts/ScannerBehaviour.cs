@@ -30,7 +30,18 @@ public class ScannerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+
+        UpdateCameraRenderer();
+    }
+
+    private void UpdateCameraRenderer()
+    {
+        if(!isCanvasAvailable)
+        {
+            return;
+        }
+        AspectRatioFilter.aspectRatio = (float)CamTexture.width / (float)CamTexture.height;
+        RawImageBackground.rectTransform.localEulerAngles = new Vector3(0,0, CamTexture.videoRotationAngle);
     }
 
     private void SetUpCamera()
@@ -50,6 +61,31 @@ public class ScannerBehaviour : MonoBehaviour
             CamTexture.Play();
             RawImageBackground.texture = CamTexture;
             isCanvasAvailable = true;
+        }
+    }
+
+    public void OnClickScan()
+    {
+        Scan();
+    }
+    private void Scan()
+    {
+        try
+        {
+            IBarcodeReader barcodeReader = new BarcodeReader();
+            Result result = barcodeReader.Decode(CamTexture.GetPixels32(), CamTexture.width, CamTexture.height);
+            if(result != null)
+            {
+                textOut.text = result.Text;
+            }
+            else
+            {
+                textOut.text = "FAILURE";
+            }
+        }
+        catch
+        {
+            textOut.text = "FAILURE TO TRY";
         }
     }
 }
