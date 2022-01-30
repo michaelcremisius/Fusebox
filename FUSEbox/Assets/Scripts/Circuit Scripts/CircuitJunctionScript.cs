@@ -19,6 +19,9 @@ public class CircuitJunctionScript : MonoBehaviour
     [Tooltip("If the junction can power incorrect circuits that don't contribute, this are them.")]
     public GameObject[] falseCircuit;
 
+    [Tooltip("Unless this is the final junction, this list should include ALL future junctions in the circuit.")]
+    public GameObject[] futureJunctions;
+
     [Tooltip("Becomes true when it's rotated correctly.")]
     public bool correctSlot = false;
 
@@ -54,8 +57,16 @@ public class CircuitJunctionScript : MonoBehaviour
     /// </summary>
     public void TurnJunction()
     {
-        //Do nothing if previous junction isn't powered. Not even allowed to click
-        if (requiresPrevious && !previousJunction.GetComponent<CircuitJunctionScript>().GetBoolState()) { }
+        //If a previous junction is off, Let junction rotate but don't turn circuit on.
+        if (requiresPrevious && !previousJunction.GetComponent<CircuitJunctionScript>().GetBoolState())
+        {
+            //Increase number.
+            GC.IncreasePressCount();
+            //Rotate
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + 90f);
+            //Change Position.
+            ChangePosition();
+        }
 
         if ((requiresPrevious && previousJunction.GetComponent<CircuitJunctionScript>().GetBoolState()) || !requiresPrevious)
         {
@@ -68,46 +79,119 @@ public class CircuitJunctionScript : MonoBehaviour
             //if there are false circuits, check for them first.
             if (falseCircuitsExist)
             {
-                //toggle all false circuits. This should hopefully turn them on but if we get edge cases I can just make the on and off scripts in CircuitScript public
+                //turn false on
                 if (currentPosition == falsePosition)
                 {
                     for (int i = 0; i < falseCircuit.Length; i++)
                     {
-                        falseCircuit[i].GetComponent<CircuitScript>().TogglePower();
+                        falseCircuit[i].GetComponent<CircuitScript>().TurnOn();
                     }
                 }
-                //same but this happens when current position is one greater than false position or reset to the beginning
+                //turn false off
                 else if (currentPosition == falsePosition + 1 || (currentPosition == 0 && falsePosition == 3))
                 {
                     for (int i = 0; i < falseCircuit.Length; i++)
                     {
-                        falseCircuit[i].GetComponent<CircuitScript>().TogglePower();
+                        falseCircuit[i].GetComponent<CircuitScript>().TurnOff();
                     }
                 }
             }
+
             //Now that false circuits are taken care of, time for actual circuits.
             if (currentPosition == correctPosition)
             {
-                //toggle correct circuits. This should set them to on.
+                //turn real on
                 for (int i = 0; i < nextCircuit.Length; i++)
                 {
-                    
-                    nextCircuit[i].GetComponent<CircuitScript>().TogglePower();
+                    nextCircuit[i].GetComponent<CircuitScript>().TurnOn();
+                }
+                if (futureJunctions.Length > 0)
+                {
+
+                    for (int i = 0; i < futureJunctions.Length; i++) futureJunctions[i].GetComponent<CircuitJunctionScript>().CheckJunction();
                 }
                 correctSlot = true;
             }
-            //Player pushed it again for some reason. Turn the circuits off.
+            //turn real off
             else if (currentPosition == correctPosition + 1 || (currentPosition == 0 && correctPosition == 3))
             {
                 //toggle correct circuits. This should set them to off.
                 for (int i = 0; i < nextCircuit.Length; i++)
                 {
-                    nextCircuit[i].GetComponent<CircuitScript>().TogglePower();
+                    nextCircuit[i].GetComponent<CircuitScript>().TurnOff();
                 }
                 correctSlot = false;
+                DisableFutureJunctions();
             }
             //lastly, try to win the game. This checks to see if all necessary circuits are lit up.
             GC.TryWin();
+        }
+    }
+
+    /// <summary>
+    /// If a previous Junction has just been activated, it will run this. Used to turn on multiple junctions in a circuit at once.
+    /// </summary>
+    public void CheckJunction()
+    {
+        //Check to see if our position is right
+        if (currentPosition == correctPosition)
+        {
+            //toggle correct circuits. This should set them to on.
+            for (int i = 0; i < nextCircuit.Length; i++)
+            {
+                nextCircuit[i].GetComponent<CircuitScript>().TurnOn();
+            }
+            correctSlot = true;
+        }
+        //check to see if our position is on a false junction.
+        else if (currentPosition == falsePosition)
+        {
+            for (int i = 0; i < falseCircuit.Length; i++)
+            {
+                falseCircuit[i].GetComponent<CircuitScript>().TurnOn();
+            }
+            correctSlot = false;
+        }
+        else
+        {
+            correctSlot = false;
+        }
+        GC.TryWin();
+    }
+
+    /// <summary>
+    /// This disables the state of all future junctions.
+    /// </summary>
+    public void DisableFutureJunctions()
+    {
+        for (int i = 0; i < futureJunctions.Length; i++)
+        {
+            futureJunctions[i].GetComponent<CircuitJunctionScript>().correctSlot = false;
+            print("Just tried to set " + futureJunctions[i] + " to false");
+            futureJunctions[i].GetComponent<CircuitJunctionScript>().DisableRealCircuits();
+            futureJunctions[i].GetComponent<CircuitJunctionScript>().DisableFalseCircuits();
+        }
+    }
+
+    /// <summary>
+    /// Name should be self explanatory
+    /// </summary>
+    public void DisableRealCircuits()
+    {
+        for (int i = 0; i < this.nextCircuit.Length; i++)
+        {
+            nextCircuit[i].GetComponent<CircuitScript>().TurnOff();
+        }
+    }
+
+    /// <summary>
+    /// Name should be self explanatory
+    /// </summary>
+    public void DisableFalseCircuits()
+    {
+        for (int i = 0; i < this.falseCircuit.Length; i++)
+        {
+            falseCircuit[i].GetComponent<CircuitScript>().TurnOff();
         }
     }
 

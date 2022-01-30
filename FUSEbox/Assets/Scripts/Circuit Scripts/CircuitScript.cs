@@ -20,8 +20,9 @@ public class CircuitScript : MonoBehaviour
     /// <summary>
     /// when powered, set all children to a particular color
     /// </summary>
-    private void TurnOn()
+    public void TurnOn()
     {
+        powered = true;
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().color = OnColor;
@@ -31,8 +32,9 @@ public class CircuitScript : MonoBehaviour
     /// <summary>
     /// Ditto to above, but when not powered
     /// </summary>
-    private void TurnOff()
+    public void TurnOff()
     {
+        powered = false;
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().color = OffColor;
@@ -46,7 +48,7 @@ public class CircuitScript : MonoBehaviour
     {
         
         powered = !powered;
-        print("TogglePower in CircuitScript on " + this.name + ", set to " + powered);
+        //print("TogglePower in CircuitScript on " + this.name + ", set to " + powered);
         if (powered) TurnOn();
         if (!powered) TurnOff();
     }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CircuitGameController : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class CircuitGameController : MonoBehaviour
     [Tooltip("The object that lights up when the player wins")]
     public GameObject lightbulb;
 
+    public Text CounterText;
+
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
     private Color OffColor = new Color(.54f, .54f, .54f, 1f);
 
@@ -33,6 +36,7 @@ public class CircuitGameController : MonoBehaviour
     void Start()
     {
         buttonPresses = 0;
+        CounterText.text = buttonPresses.ToString();
     }
 
 
@@ -42,6 +46,7 @@ public class CircuitGameController : MonoBehaviour
     public void IncreasePressCount()
     {
         buttonPresses++;
+        CounterText.text = buttonPresses.ToString();
     }
 
     /// <summary>
