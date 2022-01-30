@@ -133,30 +133,33 @@ public class CircuitJunctionScript : MonoBehaviour
     /// </summary>
     public void CheckJunction()
     {
-        //Check to see if our position is right
-        if (currentPosition == correctPosition)
+        if (requiresPrevious && previousJunction.GetComponent<CircuitJunctionScript>().GetBoolState())
         {
-            //toggle correct circuits. This should set them to on.
-            for (int i = 0; i < nextCircuit.Length; i++)
+            //Check to see if our position is right
+            if (currentPosition == correctPosition)
             {
-                nextCircuit[i].GetComponent<CircuitScript>().TurnOn();
+                //toggle correct circuits. This should set them to on.
+                for (int i = 0; i < nextCircuit.Length; i++)
+                {
+                    nextCircuit[i].GetComponent<CircuitScript>().TurnOn();
+                }
+                correctSlot = true;
             }
-            correctSlot = true;
-        }
-        //check to see if our position is on a false junction.
-        else if (currentPosition == falsePosition)
-        {
-            for (int i = 0; i < falseCircuit.Length; i++)
+            //check to see if our position is on a false junction.
+            else if (currentPosition == falsePosition)
             {
-                falseCircuit[i].GetComponent<CircuitScript>().TurnOn();
+                for (int i = 0; i < falseCircuit.Length; i++)
+                {
+                    falseCircuit[i].GetComponent<CircuitScript>().TurnOn();
+                }
+                correctSlot = false;
             }
-            correctSlot = false;
+            else
+            {
+                correctSlot = false;
+            }
+            GC.TryWin();
         }
-        else
-        {
-            correctSlot = false;
-        }
-        GC.TryWin();
     }
 
     /// <summary>
