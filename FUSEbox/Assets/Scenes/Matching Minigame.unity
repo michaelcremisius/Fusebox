@@ -318,9 +318,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f107d151bcf39743b99d6536ac9ba2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   buttonCount: 16
   buttonPrefab: {fileID: 1252281457826006278, guid: 7762f6a7d9f5be84ea2a1b9979ed37d0, type: 3}
   buttons: []
+  selectedButton1: {fileID: 0}
+  selectedButton2: {fileID: 0}
 --- !u!4 &1713820199
 Transform:
   m_ObjectHideFlags: 0

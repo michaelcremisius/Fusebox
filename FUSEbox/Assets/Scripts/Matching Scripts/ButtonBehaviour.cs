@@ -4,7 +4,8 @@
 // Creation Date :     January 31, 2022
 //
 // Brief Description : A C# script that handles the overal control of the
-                       buttons in the matching minigame.
+                       buttons in the matching minigame. Including handling
+                       when a button is clicked and changing it's color.
 *****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -19,18 +20,17 @@ public class ButtonBehaviour : MonoBehaviour
     [Tooltip("If the button has been completed or not")]
     public bool buttonCompleted = false;
 
+    private MatchingGameController mgc;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Get the MatchingGameController script to reference
+        mgc = MatchingGameController.instance;
+
         // Get the button text and update it to reflect the value
         var buttonText = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
         buttonText.text = buttonValue.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /// <summary>
@@ -38,7 +38,26 @@ public class ButtonBehaviour : MonoBehaviour
     /// </summary>
     public void ButtonClicked()
     {
-        ChangeButtonColor(Color.red);
+        // If the gamestate allows for a button to be selected
+        if(mgc.state == GameState.SelectButton1 || mgc.state == GameState.SelectButton2)
+        {
+            //Change the button color to yellow
+            ChangeButtonColor(Color.yellow);
+
+            // Tell the controller which button was selected and advance the game state
+            if(mgc.state == GameState.SelectButton1)
+            {
+                mgc.selectedButton1 = this;
+                mgc.UpdateGameState(GameState.SelectButton2);
+            }
+
+            // Tell the controller which button was selected and advance the game state
+            else if (mgc.state == GameState.SelectButton2 && mgc.selectedButton1 != this)
+            {
+                mgc.selectedButton2 = this;
+                mgc.UpdateGameState(GameState.TestButtons);
+            }
+        }
     }
 
     /// <summary>
