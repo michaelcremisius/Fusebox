@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class NavigatorController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void SwitchScene(string nextScene)
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
     }
 }
