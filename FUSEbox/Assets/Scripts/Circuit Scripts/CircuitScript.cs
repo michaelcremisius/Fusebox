@@ -9,7 +9,7 @@ public class CircuitScript : MonoBehaviour
     private bool powered;
 
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
-    private Color OffColor = Color.black;
+    private Color OffColor = Color.white;
 
     // Start is called before the first frame update
     void Start()
