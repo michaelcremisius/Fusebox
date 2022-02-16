@@ -70,6 +70,7 @@ public class ScannerBehaviour : MonoBehaviour
     }
     private void Scan()
     {
+        string meaning = null;
         try
         {
             IBarcodeReader barcodeReader = new BarcodeReader();
@@ -77,6 +78,7 @@ public class ScannerBehaviour : MonoBehaviour
             if(result != null)
             {
                 textOut.text = result.Text;
+                meaning = result.Text;
             }
             else
             {
@@ -87,5 +89,64 @@ public class ScannerBehaviour : MonoBehaviour
         {
             textOut.text = "FAILURE TO TRY";
         }
+
+        switch (meaning) //kaboom, matching, frogger, circuit
+        {
+            case "meditation":
+                PlayerPrefs.SetString("Current", "meditation");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                //kaboom
+                break;
+            case "feline":
+                PlayerPrefs.SetString("Current", "feline");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                //matching
+                break;
+            case "disaster":
+                PlayerPrefs.SetString("Current", "disaster");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //frogger
+                break;
+            case "bellissimo":
+                PlayerPrefs.SetString("Current", "bellisimo");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //circuit
+                break;
+            case "astrofacts":
+                PlayerPrefs.SetString("Current", "astrofacts");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                //kaboom
+                break;
+            case "constellation":
+                PlayerPrefs.SetString("Current", "constellation");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                //matching
+                break;
+            case "mismatched":
+                PlayerPrefs.SetString("Current", "mismatched");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //frogger
+                break;
+            case "cannon":
+                PlayerPrefs.SetString("Current", "cannon");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //circuit
+                break;
+            case "rhythm":
+                PlayerPrefs.SetString("Current", "rhythm");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //frogger
+                break;
+            case "theia":
+                PlayerPrefs.SetString("Current", "theia");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //circuit
+                break;
+            default:
+                textOut.text = "INCORRECT";
+                break;
+        
+        }
+
     }
 }

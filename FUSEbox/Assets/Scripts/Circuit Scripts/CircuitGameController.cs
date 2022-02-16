@@ -67,8 +67,67 @@ public class CircuitGameController : MonoBehaviour
         requiredJunction = requiredJunctionObject.GetComponent<CircuitJunctionScript>().GetBoolState();
         if (twoJunctionsToFinish) { requiredJunction2 = requiredJunctionObject2.GetComponent<CircuitJunctionScript>().GetBoolState(); }
 
-        if (requiredJunction && !twoJunctionsToFinish) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
+        if (requiredJunction && !twoJunctionsToFinish)
+        {
+            lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
+            LaunchPage();
+        }
         else if (twoJunctionsToFinish && requiredJunction && requiredJunction2) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
         else lightbulb.GetComponent<SpriteRenderer>().color = OffColor;
+    }
+
+
+    private void LaunchPage()
+    {
+        if (checkFirst(PlayerPrefs.GetString("Current")) == 0)
+        {
+            MakeFirst(PlayerPrefs.GetString("Current"));
+        }
+        switch (PlayerPrefs.GetString("Current"))
+        {
+            case "meditation":
+
+                break;
+            case "feline":
+
+                break;
+            case "disaster":
+
+                break;
+            case "bellissimo":
+
+                break;
+            case "astrofacts":
+
+                break;
+            case "constellation":
+
+                break;
+            case "mismatched":
+
+                break;
+            case "cannon":
+
+                break;
+            case "rhythm":
+
+                break;
+            case "theia":
+
+                break;
+            default:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");
+                break;
+
+        }
+    }
+    private int checkFirst(string game)
+    {
+        return PlayerPrefs.GetInt(game);
+    }
+    private void MakeFirst(string game)
+    {
+        PlayerPrefs.SetInt(game, 1);
+        PlayerPrefs.SetInt("TOTAL", PlayerPrefs.GetInt("TOTAL") + 1);
     }
 }

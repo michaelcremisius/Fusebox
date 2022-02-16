@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Infrastructure/Home Screen.unity
     guid: 3fb96039983392947a897d21289af797
+  - enabled: 1
+    path: Assets/Scenes/Games/Frogger.unity
+    guid: 3f179e9db29cf814f99751cfe31f276a
+  - enabled: 1
+    path: Assets/Scenes/Games/Kaboom Minigame.unity
+    guid: aaedb4c1ebbf491438332e2be192441b
+  - enabled: 1
+    path: Assets/Scenes/Games/Matching Minigame.unity
+    guid: 2d194adc052072047acbcb8ffd00e42c
+  - enabled: 1
+    path: Assets/Scenes/Games/Circuit Minigame 1.unity
+    guid: 87a271234e7b64f4e9985d7a2222beac
   m_configObjects: {}

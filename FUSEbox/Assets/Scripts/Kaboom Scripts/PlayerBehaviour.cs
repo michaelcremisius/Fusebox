@@ -9,6 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private uint score;
     public Text ScoreDisplay;
+    public int threshold;
     private float xPos;
 
     // Start is called before the first frame update
@@ -49,8 +50,68 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
             score++;
             ScoreDisplay.text = score + "";
+            if(score >= threshold)
+            {
+                LaunchPage();
+            }
         }
 
     }
 
+    private void LaunchPage()
+    {
+        if (checkFirst(PlayerPrefs.GetString("Current")) == 0)
+        {
+            MakeFirst(PlayerPrefs.GetString("Current"));
+        }
+        switch (PlayerPrefs.GetString("Current"))
+        {
+            case "meditation":
+
+                break;
+            case "feline":
+
+                break;
+            case "disaster":
+
+                break;
+            case "bellissimo":
+
+                break;
+            case "astrofacts":
+
+                break;
+            case "constellation":
+
+                break;
+            case "mismatched":
+
+                break;
+            case "cannon":
+ 
+                break;
+            case "rhythm":
+
+                break;
+            case "theia":
+
+                break;
+            default:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");
+                break;
+
+        }
+    }
+    private int checkFirst(string game)
+    {
+        return PlayerPrefs.GetInt(game);
+    }
+    private void MakeFirst(string game)
+    {
+        PlayerPrefs.SetInt(game,1);
+        PlayerPrefs.SetInt("TOTAL", PlayerPrefs.GetInt("TOTAL") + 1);
+    }
+
 }
+
+
