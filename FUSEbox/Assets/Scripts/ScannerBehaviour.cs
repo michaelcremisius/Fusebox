@@ -41,7 +41,7 @@ public class ScannerBehaviour : MonoBehaviour
             return;
         }
         AspectRatioFilter.aspectRatio = (float)CamTexture.width / (float)CamTexture.height;
-        RawImageBackground.rectTransform.localEulerAngles = new Vector3(0,0, CamTexture.videoRotationAngle);
+        RawImageBackground.rectTransform.localEulerAngles = new Vector3(0,0, CamTexture.videoRotationAngle + 180);
     }
 
     private void SetUpCamera()
@@ -58,8 +58,12 @@ public class ScannerBehaviour : MonoBehaviour
             {
                 CamTexture = new WebCamTexture(devices[i].name, (int)scanZone.rect.width, (int)scanZone.rect.height);
             }
+
+            
             CamTexture.Play();
+            
             RawImageBackground.texture = CamTexture;
+
             isCanvasAvailable = true;
         }
     }
