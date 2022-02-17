@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Infrastructure/ScannerScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Infrastructure/Home Screen.unity
     guid: 3fb96039983392947a897d21289af797
+  - enabled: 1
+    path: Assets/Scenes/Infrastructure/ScannerScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Games/Circuit Minigame 1.unity
     guid: 87a271234e7b64f4e9985d7a2222beac
@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Team Scenes/Rhythm Rumble.unity
     guid: a338e44f08e8023419e1a4e540891f9f
+  - enabled: 1
+    path: Assets/Scenes/Infrastructure/Passport.unity
+    guid: 754cac01f7196bd48b4e88c8bc84cc47
   m_configObjects: {}
