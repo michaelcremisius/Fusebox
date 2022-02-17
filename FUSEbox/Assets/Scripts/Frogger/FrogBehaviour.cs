@@ -26,7 +26,7 @@ public class FrogBehaviour : MonoBehaviour
 
     public void Movement()
     {
-        rb2d.velocity = new Vector3(7, 0, 0);
+        rb2d.velocity = new Vector3(0, 7, 0);
     }
     public void StopMovement()
     {
