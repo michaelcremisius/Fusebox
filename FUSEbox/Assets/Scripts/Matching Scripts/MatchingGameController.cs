@@ -222,34 +222,34 @@ public class MatchingGameController : MonoBehaviour
         switch (PlayerPrefs.GetString("Current"))
         {
             case "meditation":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Meditation Station");
                 break;
             case "feline":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("End of Feline");
                 break;
             case "disaster":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");//TEMP
                 break;
             case "bellissimo":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");//TEMP
                 break;
             case "astrofacts":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Astrofacts");
                 break;
             case "constellation":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Constellation Exploration");
                 break;
             case "mismatched":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Mismatch Mayhem");
                 break;
             case "cannon":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Cannon Brawl");
                 break;
             case "rhythm":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Rhythm Rumble");
                 break;
             case "theia":
-
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Theia");
                 break;
             default:
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");
