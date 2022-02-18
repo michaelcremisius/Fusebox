@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 1504891973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.55, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -409,8 +409,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1377270576}
     - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 445.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -372.29
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 27.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637405795794544475, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6637405795902705312, guid: ee1e6cdf0e51d5d4cae00629442e9a03, type: 3}
       propertyPath: m_Name
