@@ -41,7 +41,7 @@ public class ScannerBehaviour : MonoBehaviour
             return;
         }
         AspectRatioFilter.aspectRatio = (float)CamTexture.width / (float)CamTexture.height;
-        RawImageBackground.rectTransform.localEulerAngles = new Vector3(0,0, CamTexture.videoRotationAngle + 180);
+        RawImageBackground.rectTransform.localEulerAngles = new Vector3(0,180, CamTexture.videoRotationAngle + 180);
     }
 
     private void SetUpCamera()
