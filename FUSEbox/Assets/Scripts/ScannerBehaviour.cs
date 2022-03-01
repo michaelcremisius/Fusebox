@@ -32,6 +32,7 @@ public class ScannerBehaviour : MonoBehaviour
     {
 
         UpdateCameraRenderer();
+        Scan();
     }
 
     private void UpdateCameraRenderer()
