@@ -180,11 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Align the QR code inside the frame and press the button to scan.
-
-
-    Play
-    a quick minigame, then learn about the experience you''ve visited!
+  m_text: 'SCAN QR CODES TO PLAY A MINIGAME AND WIN PRIZES
 
 '
   m_isRightToLeft: 0
@@ -762,6 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f72f595c6349642a0d24031e6eb2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTeam: 0
 --- !u!1 &1290393228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d5e9e2c7c2dbd946bfa720ab47267aa, type: 2}
   m_sharedMaterial: {fileID: -5619113641620457381, guid: 0d5e9e2c7c2dbd946bfa720ab47267aa, type: 2}
@@ -1317,7 +1314,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 198.45
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

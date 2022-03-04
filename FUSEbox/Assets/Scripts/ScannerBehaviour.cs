@@ -82,12 +82,12 @@ public class ScannerBehaviour : MonoBehaviour
             Result result = barcodeReader.Decode(CamTexture.GetPixels32(), CamTexture.width, CamTexture.height);
             if(result != null)
             {
-                textOut.text = result.Text;
+                textOut.text = result.Text + " activated!";
                 meaning = result.Text;
             }
             else
             {
-                textOut.text = "FAILURE";
+                textOut.text = " ";
             }
         }
         catch
@@ -99,52 +99,62 @@ public class ScannerBehaviour : MonoBehaviour
         {
             case "meditation":
                 PlayerPrefs.SetString("Current", "meditation");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                Invoke("LoadKaboom", 1f);
                 //kaboom
                 break;
             case "feline":
                 PlayerPrefs.SetString("Current", "feline");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                Invoke("LoadMatching", 1f);
                 //matching
                 break;
             case "disaster":
                 PlayerPrefs.SetString("Current", "disaster");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                Invoke("LoadFrogger", 1f);
                 //frogger
                 break;
             case "bellissimo":
                 PlayerPrefs.SetString("Current", "bellisimo");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                Invoke("LoadCircuit1", 1f);
                 //circuit
                 break;
             case "astrofacts":
                 PlayerPrefs.SetString("Current", "astrofacts");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
+                Invoke("LoadKaboom", 1f);
                 //kaboom
                 break;
             case "constellation":
                 PlayerPrefs.SetString("Current", "constellation");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+                Invoke("LoadMatching", 1f);
                 //matching
                 break;
             case "mismatched":
                 PlayerPrefs.SetString("Current", "mismatched");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                Invoke("LoadFrogger", 1f);
                 //frogger
                 break;
             case "cannon":
                 PlayerPrefs.SetString("Current", "cannon");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                Invoke("LoadCircuit1", 1f);
                 //circuit
                 break;
             case "rhythm":
                 PlayerPrefs.SetString("Current", "rhythm");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+                Invoke("LoadFrogger", 1f);
                 //frogger
                 break;
             case "theia":
                 PlayerPrefs.SetString("Current", "theia");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+                Invoke("LoadCircuit1", 1f);
                 //circuit
                 break;
             default:
@@ -153,5 +163,22 @@ public class ScannerBehaviour : MonoBehaviour
         
         }
 
+    }
+
+    private void LoadCircuit1()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+    }
+    private void LoadFrogger()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
+    }
+    private void LoadMatching()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
+    }
+    private void LoadKaboom()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
     }
 }

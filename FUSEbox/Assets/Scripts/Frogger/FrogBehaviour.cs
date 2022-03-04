@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class FrogBehaviour : MonoBehaviour
 {
+    public GameObject coin;
+    public GameObject win;
     private Rigidbody2D rb2d;
     private Vector3 StartingPoint;
     public Text scoreBoard;
@@ -26,7 +28,10 @@ public class FrogBehaviour : MonoBehaviour
 
     public void Movement()
     {
-        rb2d.velocity = new Vector3(0, 7, 0);
+        if(score < threshold)
+        {
+            rb2d.velocity = new Vector3(0, 4.5f, 0);
+        }
     }
     public void StopMovement()
     {
@@ -39,7 +44,9 @@ public class FrogBehaviour : MonoBehaviour
             score++;
             if(score >= threshold)
             {
-                LaunchPage();
+                win.SetActive(true);
+                coin.SetActive(true);
+                Invoke("LaunchPage", 2f);
             }
             scoreBoard.text = score.ToString();
         }
