@@ -228,10 +228,10 @@ public class MatchingGameController : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("End of Feline");
                 break;
             case "disaster":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");//TEMP
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Disaster Golf");//TEMP
                 break;
             case "bellissimo":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Home Screen");//TEMP
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Bellissimio");//TEMP
                 break;
             case "astrofacts":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Astrofacts");
