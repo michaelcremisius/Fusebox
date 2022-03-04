@@ -17,6 +17,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         score = 0;
         xPos = 0;
+        ScoreDisplay.text = score + "/" + threshold;
     }
 
 
@@ -49,7 +50,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Destroy(collision.gameObject);
             score++;
-            ScoreDisplay.text = score + "";
+            ScoreDisplay.text = score + "/" + threshold;
             if(score >= threshold)
             {
                 LaunchPage();
@@ -73,10 +74,10 @@ public class PlayerBehaviour : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("End of Feline");
                 break;
             case "disaster":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Disaster Golf");//TEMP
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Disaster Golf");
                 break;
             case "bellissimo":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Bellissimo");//TEMP
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Bellissimo");
                 break;
             case "astrofacts":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Astrofacts");
