@@ -12,6 +12,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float obstacleTimer;
     private float cooldownTimer;
     private Vector3 startPos;
+    public GameObject Player;
     private void Start()
     { 
         switchTimer = .25f;
@@ -24,18 +25,28 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        cooldownTimer -= Time.deltaTime;
-        if (cooldownTimer <= 0)
+        if(Player.GetComponent<PlayerBehaviour>().score < Player.GetComponent<PlayerBehaviour>().threshold)
         {
-            CreateObstacle();
+            cooldownTimer -= Time.deltaTime;
+            if (cooldownTimer <= 0)
+            {
+                CreateObstacle();
+            }
         }
+
     }
     private void FixedUpdate()
     {
-        if (cooldownTimer <= 0)
+        if (Player.GetComponent<PlayerBehaviour>().score < Player.GetComponent<PlayerBehaviour>().threshold)
         {
-            Movement();
+            if (cooldownTimer <= 0)
+            {
+                Movement();
+            }
+        }
+        else
+        {
+            rb2d.velocity = new Vector3(0, 0, 0);
         }
     }
     public void InitiateCooldown()

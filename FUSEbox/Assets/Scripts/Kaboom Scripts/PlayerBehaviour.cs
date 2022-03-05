@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class PlayerBehaviour : MonoBehaviour
 {
 
-    private uint score;
+    public uint score;
     public Text ScoreDisplay;
     public int threshold;
     private float xPos;
-
+    public GameObject coin;
+    public GameObject win;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +36,9 @@ public class PlayerBehaviour : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
             xPos = worldPos.x;
         }
-
     }
     private void Movement()
     {
-
         transform.position = new Vector3(xPos, -3.65f, 0);
         //move the catcher there
     }
@@ -53,7 +52,9 @@ public class PlayerBehaviour : MonoBehaviour
             ScoreDisplay.text = score + "/" + threshold;
             if(score >= threshold)
             {
-                LaunchPage();
+                Invoke("LaunchPage", 2f);
+                win.SetActive(true);
+                coin.SetActive(true);
             }
         }
 

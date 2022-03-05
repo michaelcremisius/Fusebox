@@ -28,6 +28,7 @@ public class CircuitGameController : MonoBehaviour
     public GameObject lightbulb;
 
     public Text CounterText;
+    public GameObject win;
 
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
     private Color OffColor = new Color(.54f, .54f, .54f, 1f);
@@ -70,7 +71,9 @@ public class CircuitGameController : MonoBehaviour
         if (requiredJunction && !twoJunctionsToFinish)
         {
             lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
-            LaunchPage();
+            Invoke("LaunchPage", 2f);
+            win.SetActive(true);
+
         }
         else if (twoJunctionsToFinish && requiredJunction && requiredJunction2) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
         else lightbulb.GetComponent<SpriteRenderer>().color = OffColor;

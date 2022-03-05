@@ -14,7 +14,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 /// <summary>
 /// The states in which the game can be in
 /// </summary>
@@ -25,7 +24,6 @@ public enum GameState
     TestButtons,
     TestVictory
 }
-
 public class MatchingGameController : MonoBehaviour
 {
     [Tooltip("Reference to this script")]
@@ -49,6 +47,10 @@ public class MatchingGameController : MonoBehaviour
     // Buttons that have been selected
     public ButtonBehaviour selectedButton1;
     public ButtonBehaviour selectedButton2;
+
+    public GameObject coin;
+    public GameObject coin2;
+    public GameObject win;
 
     /// <summary>
     /// Awake is called when the script is loading
@@ -204,8 +206,10 @@ public class MatchingGameController : MonoBehaviour
         // If the player has found all the pairs they win, otherwise continue the game
         if(victory)
         {
-            LaunchPage();
-            print("You win!");
+            Invoke("LaunchPage",2f);
+            win.SetActive(true);
+            coin.SetActive(true);
+            coin2.SetActive(true);
         }
         else
         {

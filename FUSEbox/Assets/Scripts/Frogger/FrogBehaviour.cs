@@ -12,7 +12,7 @@ public class FrogBehaviour : MonoBehaviour
     private Vector3 StartingPoint;
     public Text scoreBoard;
     public int threshold;
-    private int score;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
