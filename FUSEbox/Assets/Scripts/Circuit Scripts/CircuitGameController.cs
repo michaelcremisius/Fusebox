@@ -29,6 +29,9 @@ public class CircuitGameController : MonoBehaviour
 
     public Text CounterText;
     public GameObject win;
+    public GameObject haze;
+    public Text startText;
+    public Button startButton;
 
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
     private Color OffColor = new Color(.54f, .54f, .54f, 1f);
@@ -36,11 +39,19 @@ public class CircuitGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         buttonPresses = 0;
         CounterText.text = buttonPresses.ToString();
     }
 
 
+    public void StartTime()
+    {
+        Time.timeScale = 1;
+        startButton.gameObject.SetActive(false);
+        startText.gameObject.SetActive(false);
+        haze.SetActive(false);
+    }
     /// <summary>
     /// Adds one to the button press count.
     /// </summary>
