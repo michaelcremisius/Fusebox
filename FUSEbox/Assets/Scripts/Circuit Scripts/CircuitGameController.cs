@@ -32,9 +32,21 @@ public class CircuitGameController : MonoBehaviour
     public GameObject haze;
     public Text startText;
     public Button startButton;
+    public AudioSource turnSound;
+    public AudioSource winSound;
 
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
     private Color OffColor = new Color(.54f, .54f, .54f, 1f);
+
+    public void PlayTurnSound()
+    {
+        turnSound.Play();
+    }
+
+    public void PlayWinSound()
+    {
+        winSound.Play();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +94,7 @@ public class CircuitGameController : MonoBehaviour
         if (requiredJunction && !twoJunctionsToFinish)
         {
             lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
+            PlayWinSound();
             Invoke("LaunchPage", 2f);
             win.SetActive(true);
 
