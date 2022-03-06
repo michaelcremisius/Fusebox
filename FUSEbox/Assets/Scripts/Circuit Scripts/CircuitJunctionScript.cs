@@ -57,6 +57,7 @@ public class CircuitJunctionScript : MonoBehaviour
     /// </summary>
     public void TurnJunction()
     {
+        GC.PlayTurnSound();
         //If a previous junction is off, Let junction rotate but don't turn circuit on.
         if (requiresPrevious && !previousJunction.GetComponent<CircuitJunctionScript>().GetBoolState())
         {
