@@ -62,10 +62,6 @@ public class MatchingGameController : MonoBehaviour
 
         // Find the grid object for reference
         grid = GameObject.Find("Grid");
-
-        // Spawn buttons and apply values
-        GenerateButtons();
-        ApplyButtonValues();
     }
 
     /// <summary>
@@ -75,6 +71,15 @@ public class MatchingGameController : MonoBehaviour
     {
         // Set the starting game state
         UpdateGameState(GameState.SelectButton1);
+    }
+
+    /// <summary>
+    /// Called when the user clicks the start button
+    /// </summary>
+    public void StartGame()
+    {
+        GenerateButtons();
+        ApplyButtonValues();
     }
 
     /// <summary>
