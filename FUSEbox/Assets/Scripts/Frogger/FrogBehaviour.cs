@@ -13,6 +13,9 @@ public class FrogBehaviour : MonoBehaviour
     public Text scoreBoard;
     public int threshold;
     public int score;
+
+    public AudioSource winSound;
+    public AudioSource loseSound; //TEMP: We can make this a set and choose a sound at random, but I'ven't the time currently
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +47,16 @@ public class FrogBehaviour : MonoBehaviour
             score++;
             if(score >= threshold)
             {
+                winSound.Play();
                 win.SetActive(true);
                 coin.SetActive(true);
                 Invoke("LaunchPage", 2f);
             }
             scoreBoard.text = score.ToString();
+        }
+        else
+        {
+            loseSound.Play();
         }
         transform.position = StartingPoint;
 
