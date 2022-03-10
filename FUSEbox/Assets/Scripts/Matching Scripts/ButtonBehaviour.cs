@@ -27,10 +27,6 @@ public class ButtonBehaviour : MonoBehaviour
     {
         // Get the MatchingGameController script to reference
         mgc = MatchingGameController.instance;
-
-        // Get the button text and update it to reflect the value
-        var buttonText = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
-        buttonText.text = buttonValue.ToString();
     }
 
     /// <summary>
@@ -43,6 +39,8 @@ public class ButtonBehaviour : MonoBehaviour
         {
             //Change the button color to yellow
             ChangeButtonColor(Color.yellow);
+
+            transform.GetChild(0).gameObject.SetActive(true);
 
             // Tell the controller which button was selected and advance the game state
             if(mgc.state == GameState.SelectButton1)

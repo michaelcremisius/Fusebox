@@ -41,6 +41,9 @@ public class MatchingGameController : MonoBehaviour
     [Tooltip("List of the buttons in the grid")]
     public List<GameObject> buttons = new List<GameObject>();
 
+    [Tooltip("List of the images that can appear on the buttons")]
+    public List<GameObject> images = new List<GameObject>();
+
     // Reference to the grid object
     private GameObject grid;
 
@@ -80,6 +83,7 @@ public class MatchingGameController : MonoBehaviour
     {
         GenerateButtons();
         ApplyButtonValues();
+        ApplyButtonImages();
     }
 
     /// <summary>
@@ -153,6 +157,15 @@ public class MatchingGameController : MonoBehaviour
         }
     }
 
+    private void ApplyButtonImages()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            int imageNum = buttons[i].GetComponent<ButtonBehaviour>().buttonValue - 1;
+            Instantiate(images[imageNum], buttons[i].transform);
+        }
+    }
+
     /// <summary>
     /// Tests whether the two selected buttons are the same and changes the color based on the outcome
     /// </summary>
@@ -170,7 +183,7 @@ public class MatchingGameController : MonoBehaviour
             selectedButton1.ChangeButtonColor(Color.red);
             selectedButton2.ChangeButtonColor(Color.red);
 
-            Invoke("ResetButtons", 0.1f);
+            Invoke("ResetButtons", 0.2f);
         }
 
         // Advance the game state
@@ -185,6 +198,9 @@ public class MatchingGameController : MonoBehaviour
     {
         selectedButton1.ChangeButtonColor(Color.white);
         selectedButton2.ChangeButtonColor(Color.white);
+
+        selectedButton1.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        selectedButton2.gameObject.transform.GetChild(0).gameObject.SetActive(false);
 
         selectedButton1 = null;
         selectedButton2 = null;
