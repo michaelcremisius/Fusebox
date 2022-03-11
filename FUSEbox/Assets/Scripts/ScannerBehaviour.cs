@@ -92,7 +92,7 @@ public class ScannerBehaviour : MonoBehaviour
         }
         catch
         {
-            textOut.text = "FAILURE TO TRY";
+            textOut.text = " ";
         }
 
         switch (meaning) //kaboom, matching, frogger, circuit
@@ -116,7 +116,7 @@ public class ScannerBehaviour : MonoBehaviour
                 //frogger
                 break;
             case "bellissimo":
-                PlayerPrefs.SetString("Current", "bellisimo");
+                PlayerPrefs.SetString("Current", "bellissimo");
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
                 Invoke("LoadCircuit1", 1f);
                 //circuit
@@ -158,7 +158,7 @@ public class ScannerBehaviour : MonoBehaviour
                 //circuit
                 break;
             default:
-                textOut.text = "INCORRECT";
+                textOut.text = "SEARCHING";
                 break;
         
         }
