@@ -622,6 +622,15 @@ MonoBehaviour:
   buttonCount: 16
   buttonPrefab: {fileID: 1252281457826006278, guid: 7762f6a7d9f5be84ea2a1b9979ed37d0, type: 3}
   buttons: []
+  images:
+  - {fileID: 2306165967055366736, guid: 146e6d417000d08458a305c6fe9f188b, type: 3}
+  - {fileID: 2565292820993528037, guid: d73d6b39410d1374097dca3ff7324200, type: 3}
+  - {fileID: 6835167729297846096, guid: 45a6f1007a12bfc4a86e7ff761c01c6a, type: 3}
+  - {fileID: 3274362606120931645, guid: 079e454cfbc27bc48983c0902b62a7b6, type: 3}
+  - {fileID: 1245806471753605388, guid: 54bb4a021c548f1468b6b97004999370, type: 3}
+  - {fileID: 7653030104539490565, guid: a7c0e2b9ebab1a84fbe43c0b48d85f18, type: 3}
+  - {fileID: 6051918586525156476, guid: cdb0635628cea9147a64412583496eec, type: 3}
+  - {fileID: 6584262575716953108, guid: 1733a762acd1e524cb285622bd7ec54f, type: 3}
   selectedButton1: {fileID: 0}
   selectedButton2: {fileID: 0}
   coin: {fileID: 1075994535}
