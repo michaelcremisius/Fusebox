@@ -974,7 +974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1601641581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   ScoreDisplay: {fileID: 1184072510}
-  threshold: 5
+  threshold: 10
   coin: {fileID: 676273678}
   win: {fileID: 798752446}
 --- !u!1 &2073697775

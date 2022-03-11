@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lives = 3;
+        //lives = 3;
         Time.timeScale = 0;
         livesDisplay.text = lives + "";
     }
@@ -27,15 +27,15 @@ public class GameController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        lives--;
-        livesDisplay.text = lives + "";
+        //lives--;
+        //livesDisplay.text = lives + "";
         Destroy(collision.gameObject);
         Enemy.GetComponent<EnemyBehaviour>().InitiateCooldown();
-        if(lives <= 0)
+/*        if(lives <= 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
             //lose game
-        }
+        }*/
     }
     public int GetLives()
     {
