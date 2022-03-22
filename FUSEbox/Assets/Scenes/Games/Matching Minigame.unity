@@ -398,6 +398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1354878435316731298, guid: 8f2a1dba344db8448a44c0421d2439fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2a1dba344db8448a44c0421d2439fb, type: 3}
 --- !u!1 &819340447 stripped
@@ -976,6 +980,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Text
+      value: MATCH ALL THE CARDS TO WIN A PRIZE AND LEARN MORE ABOUT FUSE!
+      objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079327, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Name
       value: StartText
@@ -1011,7 +1019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537254852518162347, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 5537254852518162347, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1148,7 +1156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537254852518162347, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 5537254852518162347, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
       propertyPath: m_LocalPosition.y
