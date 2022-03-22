@@ -13,6 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     private float xPos;
     public GameObject coin;
     public GameObject win;
+    public AudioSource ScoreSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,7 @@ public class PlayerBehaviour : MonoBehaviour
         if(collision.gameObject.tag.Equals("Obstacle"))
         {
             Destroy(collision.gameObject);
+            ScoreSound.Play();
             score++;
             ScoreDisplay.text = score + "/" + threshold;
             if(score >= threshold)

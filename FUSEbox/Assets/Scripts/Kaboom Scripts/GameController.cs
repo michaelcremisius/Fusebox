@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     public Text startText;
     public Button startButton;
     public GameObject haze;
+
+    public AudioSource MissSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class GameController : MonoBehaviour
         //lives--;
         //livesDisplay.text = lives + "";
         Destroy(collision.gameObject);
+        MissSound.Play();
         Enemy.GetComponent<EnemyBehaviour>().InitiateCooldown();
 /*        if(lives <= 0)
         {

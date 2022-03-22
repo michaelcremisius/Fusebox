@@ -44,6 +44,9 @@ public class MatchingGameController : MonoBehaviour
     [Tooltip("List of the images that can appear on the buttons")]
     public List<GameObject> images = new List<GameObject>();
 
+    public AudioSource MatchSound;
+    public AudioSource MissSound;
+
     // Reference to the grid object
     private GameObject grid;
 
@@ -174,12 +177,14 @@ public class MatchingGameController : MonoBehaviour
         // If the buttons have the same value...
         if (selectedButton1.buttonValue == selectedButton2.buttonValue)
         {
+            MatchSound.Play();
             selectedButton1.gameObject.GetComponent<Button>().interactable = false;
             selectedButton2.gameObject.GetComponent<Button>().interactable = false;
         }
         // If the buttons have different values...
         else
         {
+            MissSound.Play();
             selectedButton1.ChangeButtonColor(Color.red);
             selectedButton2.ChangeButtonColor(Color.red);
 
