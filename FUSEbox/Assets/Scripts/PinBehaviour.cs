@@ -8,9 +8,10 @@ public class PinBehaviour : MonoBehaviour
     private string pin;
     public TextMeshProUGUI textBox;
     private bool activated;
-    private 
+    private float countDown;
+    public float maxCountDown;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         activated = false;
         pin = "-----";
@@ -127,6 +128,7 @@ public class PinBehaviour : MonoBehaviour
                     //circuit
                     break;
                 default:
+                    countDown = maxCountDown;
                     break;
             }
         }
@@ -153,5 +155,23 @@ public class PinBehaviour : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
         activated = true;
+    }
+
+    private void Update()
+    {
+        TickDown();
+
+    }
+    private void TickDown()
+    {
+        if(countDown > 0f)
+        {
+            countDown -= Time.deltaTime;
+            textBox.color = Color.red;
+        }
+        else
+        {
+            textBox.color = Color.white;
+        }
     }
 }

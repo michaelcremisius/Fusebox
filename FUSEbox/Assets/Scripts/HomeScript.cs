@@ -17,6 +17,9 @@ public class HomeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 }
