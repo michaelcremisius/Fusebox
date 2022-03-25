@@ -698,7 +698,6 @@ GameObject:
   - component: {fileID: 432720032}
   - component: {fileID: 432720035}
   - component: {fileID: 432720034}
-  - component: {fileID: 432720033}
   m_Layer: 5
   m_Name: circle bar
   m_TagString: Untagged
@@ -725,21 +724,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &432720033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432720031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 0.3066038, b: 0.3066038, a: 0.39607844}
-  m_EffectDistance: {x: 1.2, y: 1.23}
-  m_UseGraphicAlpha: 1
 --- !u!114 &432720034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,7 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.60784316, g: 0.16470589, b: 0.1254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1677,6 +1661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 385598409}
   timerMax: 0.15
+  circleBar: {fileID: 432720034}
+  MaxFillTimer: 0.01
 --- !u!1 &1766488779
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,11 +11,16 @@ public class HomeScript : MonoBehaviour
     public float timerMax;
     private float scaledTimerMax;
     private float timer;
+    public Image circleBar;
+    private float fillTimer;
+    public float MaxFillTimer;
     // Start is called before the first frame update
     void Start()
     {
         timer = timerMax;
+        fillTimer = MaxFillTimer;
         scaledTimerMax = timerMax;
+        circleBar.fillAmount = 0;
         //Score.GetComponent<TextMeshProUGUI>().text = "" + PlayerPrefs.GetInt("TOTAL");
         
     }
@@ -29,12 +34,13 @@ public class HomeScript : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.W))
         {
-            PlayerPrefs.SetInt("TOTAL", 5);
+            PlayerPrefs.SetInt("TOTAL", 10);
         }
         if (representationalScore < PlayerPrefs.GetInt("TOTAL"))
         {
             CountUP();
         }
+        FillCircle();
     }
 
     void CountUP()
@@ -49,12 +55,27 @@ public class HomeScript : MonoBehaviour
             print(representationalScore / PlayerPrefs.GetInt("TOTAL"));
             if ((float)representationalScore / PlayerPrefs.GetInt("TOTAL") >= .5f)
             {
-                scaledTimerMax += .15f;
+                scaledTimerMax += .07f;
                 timer = scaledTimerMax;
             }
             else
             {
                 timer = timerMax;
+            }
+        }
+    }
+    private void FillCircle()
+    {
+        if (fillTimer > 0)
+        {
+            fillTimer -= Time.deltaTime;
+        }
+        else
+        {
+            if (circleBar.fillAmount < (float)PlayerPrefs.GetInt("TOTAL")/10)
+            {
+                fillTimer = MaxFillTimer;//+ (circleBar.fillAmount/85);
+                circleBar.fillAmount += .01f;
             }
         }
     }
