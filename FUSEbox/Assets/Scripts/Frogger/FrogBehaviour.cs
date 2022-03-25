@@ -26,7 +26,10 @@ public class FrogBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(score >= 1)
+        {
+            transform.position = StartingPoint;
+        }
     }
 
     public void Movement()

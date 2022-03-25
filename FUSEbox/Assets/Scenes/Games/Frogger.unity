@@ -2895,7 +2895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079312, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 414.17
+      value: 735
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079312, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2947,7 +2947,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Text
-      value: GET TO THE OTHER SIDE TO WIN A PRIZE AND LEARN MORE ABOUT FUSE!
+      value: PRESS DOWN ON THE SCREEN TO GET TO THE OTHER SIDE TO WIN A PRIZE AND
+        LEARN MORE ABOUT FUSE!
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079327, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Name
