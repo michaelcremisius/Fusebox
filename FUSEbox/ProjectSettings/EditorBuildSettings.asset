@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Team Scenes/Theia.unity
     guid: f635265ed4db4174cbcd48deaffdb6ce
   - enabled: 1
+    path: Assets/Scenes/Infrastructure/All Scenes Collected.unity
+    guid: 1bc015040d16af64d8b23d0fe453185f
+  - enabled: 1
     path: Assets/Scenes/Team Scenes/Meditation Station.unity
     guid: 6dd525e7ea316a3418ec3fb1ec8b454e
   - enabled: 1
