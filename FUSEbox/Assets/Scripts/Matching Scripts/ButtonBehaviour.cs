@@ -41,7 +41,6 @@ public class ButtonBehaviour : MonoBehaviour
             ChangeButtonColor(Color.yellow);
 
             transform.GetChild(0).gameObject.SetActive(true);
-
             // Tell the controller which button was selected and advance the game state
             if(mgc.state == GameState.SelectButton1)
             {

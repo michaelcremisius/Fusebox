@@ -10,6 +10,7 @@ public class PinBehaviour : MonoBehaviour
     private bool activated;
     private float countDown;
     public float maxCountDown;
+    public AudioSource ErrorSound;
     // Start is called before the first frame update
     private void Start()
     {
@@ -129,6 +130,7 @@ public class PinBehaviour : MonoBehaviour
                     break;
                 default:
                     countDown = maxCountDown;
+                    ErrorSound.Play();
                     break;
             }
         }

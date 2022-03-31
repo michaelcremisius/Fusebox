@@ -46,6 +46,7 @@ public class MatchingGameController : MonoBehaviour
 
     public AudioSource MatchSound;
     public AudioSource MissSound;
+    public AudioSource FlipSound;
 
     // Reference to the grid object
     private GameObject grid;
@@ -105,6 +106,7 @@ public class MatchingGameController : MonoBehaviour
             case GameState.SelectButton1:
                 break;
             case GameState.SelectButton2:
+                FlipSound.Play();
                 break;
             case GameState.TestButtons:
                 AnalizeButtonValues();
