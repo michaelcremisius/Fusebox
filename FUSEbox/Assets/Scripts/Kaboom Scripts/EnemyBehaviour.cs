@@ -13,6 +13,8 @@ public class EnemyBehaviour : MonoBehaviour
     private float cooldownTimer;
     private Vector3 startPos;
     public GameObject Player;
+    Animator s_animator;
+
     private void Start()
     { 
         switchTimer = .25f;
@@ -21,6 +23,7 @@ public class EnemyBehaviour : MonoBehaviour
         cooldownTimer = 1f;
         startPos = transform.position;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        s_animator = gameObject.GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -62,12 +65,18 @@ public class EnemyBehaviour : MonoBehaviour
         obstacleTimer -= Time.deltaTime;
         if(obstacleTimer <= 0)
         {
+            s_animator.SetBool("isSpit", true);
             Instantiate(obstacle, new Vector3(transform.position.x, transform.position.y - 1, 0), Quaternion.identity);
             obstacleTimer = 1f;
         }
+        Invoke("TransitionOut", .75f);
     }
 
+    private void TransitionOut()
+    {
+        s_animator.SetBool("isSpit", false);
 
+    }
 
     private void Movement()
     {
