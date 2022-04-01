@@ -2950,6 +2950,18 @@ PrefabInstance:
       value: PRESS DOWN ON THE SCREEN TO GET TO THE OTHER SIDE TO WIN A PRIZE AND
         LEARN MORE ABOUT FUSE!
       objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079327, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Name
       value: StartText
@@ -3126,7 +3138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537254852518162356, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb68d8ed0b3530948a1566a29997d2b6, type: 3}
@@ -3184,6 +3196,18 @@ PrefabInstance:
     - target: {fileID: 7996057825953018550, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}

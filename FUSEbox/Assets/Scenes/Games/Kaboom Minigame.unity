@@ -1075,6 +1075,18 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.89411765
       objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996057825953018551, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91672f5f1f3fa8e4ba0d74ec3cffc713, type: 3}
 --- !u!1 &632914475 stripped
@@ -1313,7 +1325,6 @@ GameObject:
   - component: {fileID: 1184072509}
   - component: {fileID: 1184072511}
   - component: {fileID: 1184072510}
-  - component: {fileID: 1184072512}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1382,21 +1393,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184072508}
   m_CullTransparentMesh: 1
---- !u!114 &1184072512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184072508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 3, y: -3}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1601641580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1648,18 @@ PrefabInstance:
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Text
       value: CATCH ALL THE SHIELDS WIN A PRIZE AND LEARN MORE ABOUT FUSE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079327, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Name
