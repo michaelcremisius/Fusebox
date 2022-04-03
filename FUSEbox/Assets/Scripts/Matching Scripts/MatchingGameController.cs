@@ -206,6 +206,9 @@ public class MatchingGameController : MonoBehaviour
         selectedButton1.ChangeButtonColor(Color.white);
         selectedButton2.ChangeButtonColor(Color.white);
 
+        selectedButton1.ResetSprite();
+        selectedButton2.ResetSprite();
+
         selectedButton1.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         selectedButton2.gameObject.transform.GetChild(0).gameObject.SetActive(false);
 

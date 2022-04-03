@@ -14,6 +14,11 @@ using UnityEngine.UI;
 
 public class ButtonBehaviour : MonoBehaviour
 {
+    [Tooltip("Sprite of the back of the card")]
+    public Sprite cardBack;
+    [Tooltip("Sprite of the front of the card")]
+    public Sprite cardFront;
+
     [Tooltip("The value assigned to the button")]
     public int buttonValue;
 
@@ -21,12 +26,14 @@ public class ButtonBehaviour : MonoBehaviour
     public bool buttonCompleted = false;
 
     private MatchingGameController mgc;
+    private Image buttonImage;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the MatchingGameController script to reference
         mgc = MatchingGameController.instance;
+        buttonImage = GetComponent<Image>();
     }
 
     /// <summary>
@@ -39,6 +46,7 @@ public class ButtonBehaviour : MonoBehaviour
         {
             //Change the button color to yellow
             ChangeButtonColor(Color.yellow);
+            buttonImage.sprite = cardFront;
 
             transform.GetChild(0).gameObject.SetActive(true);
             // Tell the controller which button was selected and advance the game state
@@ -69,5 +77,10 @@ public class ButtonBehaviour : MonoBehaviour
         colors.selectedColor = newColor;
         colors.highlightedColor = newColor;
         GetComponent<Button>().colors = colors;
+    }
+
+    public void ResetSprite()
+    {
+        buttonImage.sprite = cardBack;
     }
 }

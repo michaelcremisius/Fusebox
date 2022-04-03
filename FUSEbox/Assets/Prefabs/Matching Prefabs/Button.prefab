@@ -145,5 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1a04efc1c567d44b72a52f104adeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardBack: {fileID: -2842052407051664608, guid: e3c7d2ab8a193bd4f96a1e0886b02469, type: 3}
+  cardFront: {fileID: 364870483879151974, guid: 843081883567a9c4aac287772415c521, type: 3}
   buttonValue: 0
   buttonCompleted: 0
