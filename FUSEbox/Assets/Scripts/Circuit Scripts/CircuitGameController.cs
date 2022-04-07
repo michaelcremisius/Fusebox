@@ -30,7 +30,7 @@ public class CircuitGameController : MonoBehaviour
     public Text CounterText;
     public GameObject win;
     public GameObject haze;
-    public Text startText;
+    public GameObject startText;
     public Button startButton;
     public AudioSource turnSound;
     public AudioSource winSound;
@@ -61,7 +61,7 @@ public class CircuitGameController : MonoBehaviour
     {
         Time.timeScale = 1;
         startButton.gameObject.SetActive(false);
-        startText.gameObject.SetActive(false);
+        startText.SetActive(false);
         haze.SetActive(false);
     }
     /// <summary>
@@ -91,7 +91,7 @@ public class CircuitGameController : MonoBehaviour
         requiredJunction = requiredJunctionObject.GetComponent<CircuitJunctionScript>().GetBoolState();
         if (twoJunctionsToFinish) { requiredJunction2 = requiredJunctionObject2.GetComponent<CircuitJunctionScript>().GetBoolState(); }
 
-        if (requiredJunction && !twoJunctionsToFinish)
+        if ((requiredJunction && !twoJunctionsToFinish) || (twoJunctionsToFinish && requiredJunction && requiredJunction2))
         {
             lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
             PlayWinSound();
@@ -99,7 +99,7 @@ public class CircuitGameController : MonoBehaviour
             win.SetActive(true);
 
         }
-        else if (twoJunctionsToFinish && requiredJunction && requiredJunction2) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
+        //else if (twoJunctionsToFinish && requiredJunction && requiredJunction2) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
         else lightbulb.GetComponent<SpriteRenderer>().color = OffColor;
     }
 

@@ -40,7 +40,7 @@ public class CircuitJunctionScript : MonoBehaviour
     [Range(0, 3)]
     public int startPosition;
 
-    private int currentPosition;
+    public int currentPosition;
 
     private CircuitGameController GC;
 
@@ -101,6 +101,7 @@ public class CircuitJunctionScript : MonoBehaviour
             //Now that false circuits are taken care of, time for actual circuits.
             if (currentPosition == correctPosition)
             {
+                correctSlot = true;
                 //turn real on
                 for (int i = 0; i < nextCircuit.Length; i++)
                 {
@@ -111,22 +112,23 @@ public class CircuitJunctionScript : MonoBehaviour
 
                     for (int i = 0; i < futureJunctions.Length; i++) futureJunctions[i].GetComponent<CircuitJunctionScript>().CheckJunction();
                 }
-                correctSlot = true;
+                
             }
             //turn real off
             else if (currentPosition == correctPosition + 1 || (currentPosition == 0 && correctPosition == 3))
             {
+                correctSlot = false;
                 //toggle correct circuits. This should set them to off.
                 for (int i = 0; i < nextCircuit.Length; i++)
                 {
                     nextCircuit[i].GetComponent<CircuitScript>().TurnOff();
                 }
-                correctSlot = false;
+                
                 DisableFutureJunctions();
             }
-            //lastly, try to win the game. This checks to see if all necessary circuits are lit up.
-            GC.TryWin();
         }
+        //lastly, try to win the game. This checks to see if all necessary circuits are lit up.
+        GC.TryWin();
     }
 
     /// <summary>
