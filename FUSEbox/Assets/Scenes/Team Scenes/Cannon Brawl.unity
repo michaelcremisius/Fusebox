@@ -4803,7 +4803,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276588236}
         m_TargetAssemblyTypeName: NavigatorController, Assembly-CSharp
         m_MethodName: SwitchScene
         m_Mode: 5
@@ -9045,7 +9045,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276588236}
         m_TargetAssemblyTypeName: NavigatorController, Assembly-CSharp
         m_MethodName: SwitchScene
         m_Mode: 5
@@ -10408,7 +10408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276588236}
         m_TargetAssemblyTypeName: NavigatorController, Assembly-CSharp
         m_MethodName: SwitchScene
         m_Mode: 5
