@@ -125,7 +125,7 @@ public class PinBehaviour : MonoBehaviour
                 case "14412": //theia
                     textBox.text = "THEIA";
                     PlayerPrefs.SetString("Current", "theia");
-                    Invoke("LoadCircuit1", 1f);
+                    Invoke("LoadCircuit2", 1f);
                     //circuit
                     break;
                 default:
@@ -141,6 +141,11 @@ public class PinBehaviour : MonoBehaviour
     private void LoadCircuit1()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
+        activated = true;
+    }
+    private void LoadCircuit2()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 2");
         activated = true;
     }
     private void LoadFrogger()
