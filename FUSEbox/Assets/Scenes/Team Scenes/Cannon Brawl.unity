@@ -330,8 +330,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End of Feline is a boss battle experience where you play as wizard cats
-    that cast spells by scanning barcodes. The team '
+  m_text: Cannon brawl is a two player competitive experience where you fight against
+    your opponent with battleships. This
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4866,9 +4866,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'decided to integrate barcode scanners into their project from the very
-    beginning and they have had little to no issue learning and mastering the systems
-    for their mechanics. '
+  m_text: 'game has gone through many iterations on different platforms until the
+    team got the touch pad medium fully functioning. The cannon brawl team has worked
+    tirelessly to deliver a well polished experience through code, art, and other
+    creative mediums.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -2007,9 +2007,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'decided to integrate barcode scanners into their project from the very
-    beginning and they have had little to no issue learning and mastering the systems
-    for their mechanics. '
+  m_text: 'godlike powers through various mushroom caps to jump, glide, and race
+    your way through magical worlds. Solve tricky puzzles and traverse hazardous
+    lands in a beautiful fantasy world teeming with life. To reward your curiosity,
+    collect flowers on the way to obtain secret unlockables. Will you fulfill your
+    destiny and save the world from ruin? Or succumb to the dark forces at play?
+    Embark on a journey filled with adventure and wonder that can only be described
+    as, Bellissimo!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2750,8 +2756,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End of Feline is a boss battle experience where you play as wizard cats
-    that cast spells by scanning barcodes. The team '
+  m_text: 'Bellissimo is a 3D platformer where you play as the hero mushroom, Bello,
+    on his quest to save the world from an evil entity. Acquire '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

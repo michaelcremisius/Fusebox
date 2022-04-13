@@ -3547,8 +3547,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End of Feline is a boss battle experience where you play as wizard cats
-    that cast spells by scanning barcodes. The team '
+  m_text: 'Theia is an augmented reality experience where players create and design
+    their own alien plants. Our team has worked to '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7858,9 +7858,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'decided to integrate barcode scanners into their project from the very
-    beginning and they have had little to no issue learning and mastering the systems
-    for their mechanics. '
+  m_text: develop intriguing gameplay by making a highly customizable generation
+    system and a wide variety of plant models and features. Though art assets and
+    programming proved at times to be substantial hurdles, we are proud and inspired
+    by all we've achieved in making Theia.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

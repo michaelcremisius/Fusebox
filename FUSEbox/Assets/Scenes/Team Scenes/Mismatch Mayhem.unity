@@ -2466,8 +2466,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End of Feline is a boss battle experience where you play as wizard cats
-    that cast spells by scanning barcodes. The team '
+  m_text: Mismatch Mayhem is an arcade style fighting game. From its very conception,
+    Mismatch Mayhem was ported to arcade cabinets and
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5646,9 +5646,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'decided to integrate barcode scanners into their project from the very
-    beginning and they have had little to no issue learning and mastering the systems
-    for their mechanics. '
+  m_text: "the team took to development of the project very easily. Many adjustments
+    were made at the start of their development to rescale the concept but after
+    the initial hurdles they\u2019ve had no issues creating their experience.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
