@@ -462,8 +462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -778.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -2583}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41819929
 MonoBehaviour:
@@ -1676,8 +1676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -547.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -1779}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396494201
 MonoBehaviour:
@@ -2555,8 +2555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -316.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -975}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618004656
 MonoBehaviour:
@@ -2798,8 +2798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -85.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -171}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679851585
 MonoBehaviour:
@@ -3411,8 +3411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -547.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -2181}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884186162
 MonoBehaviour:
@@ -3524,8 +3524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -169.5, y: 142}
-  m_SizeDelta: {x: 339, y: 203.604}
+  m_AnchoredPosition: {x: -144.5, y: 142}
+  m_SizeDelta: {x: 389, y: 203.604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911341978
 MonoBehaviour:
@@ -3547,8 +3547,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Theia is an augmented reality experience where players create and design
-    their own alien plants. Our team has worked to '
+  m_text: Theia is an augmented reality experience where players create and design
+    their own alien plants. Our team has worked to develop intriguing gameplay by
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3611,7 +3611,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.00012584413, w: -253.38354}
+  m_margin: {x: 0, y: 0, z: 0.00012584413, w: -89.413826}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5408,8 +5408,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -778.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -2985}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180434350
 MonoBehaviour:
@@ -6034,8 +6034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: -78.275024}
-  m_SizeDelta: {x: 800, y: 1150.072}
+  m_AnchoredPosition: {x: 0.000018917, y: -1537.915}
+  m_SizeDelta: {x: 800, y: 4069.346}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241255325
 MonoBehaviour:
@@ -6108,10 +6108,10 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 304, y: 171}
+  m_CellSize: {x: 608, y: 342}
   m_Spacing: {x: 60, y: 60}
   m_Constraint: 1
-  m_ConstraintCount: 2
+  m_ConstraintCount: 1
 --- !u!1 &1254917253
 GameObject:
   m_ObjectHideFlags: 0
@@ -7858,10 +7858,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: develop intriguing gameplay by making a highly customizable generation
-    system and a wide variety of plant models and features. Though art assets and
-    programming proved at times to be substantial hurdles, we are proud and inspired
-    by all we've achieved in making Theia.
+  m_text: making a highly customizable generation system and a wide variety of plant
+    models and features. Though art assets and programming proved at times to be
+    substantial hurdles, we are proud and inspired by all we've achieved in making
+    Theia.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8084,8 +8084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -85.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -573}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584929267
 MonoBehaviour:
@@ -8479,8 +8479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -1009.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -3387}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628716313
 MonoBehaviour:
@@ -9673,8 +9673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -316.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -1377}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998191427
 MonoBehaviour:
@@ -10440,8 +10440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582, y: -1009.5}
-  m_SizeDelta: {x: 304, y: 171}
+  m_AnchoredPosition: {x: 400, y: -3789}
+  m_SizeDelta: {x: 608, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098180928
 MonoBehaviour:
