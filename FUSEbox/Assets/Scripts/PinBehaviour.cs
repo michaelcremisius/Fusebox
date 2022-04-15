@@ -16,6 +16,7 @@ public class PinBehaviour : MonoBehaviour
     {
         activated = false;
         pin = "-----";
+        Time.timeScale = 1;
     }
 
     public void AddNum(string num)
@@ -140,26 +141,31 @@ public class PinBehaviour : MonoBehaviour
 
     private void LoadCircuit1()
     {
+        print("CIRCUIT1");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
         activated = true;
     }
     private void LoadCircuit2()
     {
+        print("CIRCUIT2");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 2");
         activated = true;
     }
     private void LoadFrogger()
     {
+        print("FROGGER");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
         activated = true;
     }
     private void LoadMatching()
     {
+        print("MATCHING");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
         activated = true;
     }
     private void LoadKaboom()
     {
+        print("KABOOM");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
         activated = true;
     }
