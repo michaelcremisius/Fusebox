@@ -12,6 +12,10 @@ using UnityEngine;
 
 public class TeamLayoutController : MonoBehaviour
 {
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     /// <summary>
     /// Changes the layout of the page based on which button is pressed
     /// </summary>

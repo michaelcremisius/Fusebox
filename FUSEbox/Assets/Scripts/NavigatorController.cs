@@ -6,6 +6,10 @@ public class NavigatorController : MonoBehaviour
 {
 
     public bool isTeam;
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     public void SwitchScene(string nextScene)
     {
         if (isTeam)
