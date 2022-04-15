@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NavigatorController : MonoBehaviour
 {
+
     public bool isTeam;
     public void SwitchScene(string nextScene)
     {
