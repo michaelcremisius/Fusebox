@@ -13,10 +13,17 @@ public class FrogBehaviour : MonoBehaviour
     public Text scoreBoard;
     public int threshold;
     public int score;
+    Animator f_animator;
 
     public AudioSource winSound;
     public AudioSource loseSound; //TEMP: We can make this a set and choose a sound at random, but I'ven't the time currently
     // Start is called before the first frame update
+    void Awake()
+    {
+        f_animator = gameObject.GetComponent<Animator>();
+        f_animator.SetBool("isMove", false);
+    }
+    
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -37,11 +44,13 @@ public class FrogBehaviour : MonoBehaviour
         if(score < threshold)
         {
             rb2d.velocity = new Vector3(0, 4.5f, 0);
+            f_animator.SetBool("isMove", true);
         }
     }
     public void StopMovement()
     {
         rb2d.velocity = new Vector3(0, 0, 0);
+        f_animator.SetBool("isMove", false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
