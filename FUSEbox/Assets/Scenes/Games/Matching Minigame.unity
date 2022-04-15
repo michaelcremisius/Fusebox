@@ -1738,8 +1738,8 @@ MonoBehaviour:
   FlipSound: {fileID: 1987901762}
   selectedButton1: {fileID: 0}
   selectedButton2: {fileID: 0}
-  coin: {fileID: 0}
-  coin2: {fileID: 0}
+  coin: {fileID: 1845660555}
+  coin2: {fileID: 1929358958}
   win: {fileID: 819340447}
 --- !u!4 &1713820199
 Transform:

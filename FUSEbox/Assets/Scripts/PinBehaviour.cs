@@ -70,19 +70,19 @@ public class PinBehaviour : MonoBehaviour
             switch (pin) //kaboom, matching, frogger, circuit
             {
                 case "54461": //meditation
-                    textBox.text = "MEDITATION";
+                    textBox.text = "MEDITATION\nSTATION";
                     PlayerPrefs.SetString("Current", "meditation");
                     Invoke("LoadKaboom", 1f);
                     //kaboom
                     break;
                 case "33310": //feline
-                    textBox.text = "FELINE";
+                    textBox.text = "END OF\nFELINE";
                     PlayerPrefs.SetString("Current", "feline");
                     Invoke("LoadMatching", 1f);
                     //matching
                     break;
                 case "71266": //disaster
-                    textBox.text = "DISASTER";
+                    textBox.text = "DISASTER GOLF";
                     PlayerPrefs.SetString("Current", "disaster");
                     Invoke("LoadFrogger", 1f);
                     //frogger
@@ -94,31 +94,31 @@ public class PinBehaviour : MonoBehaviour
                     //circuit
                     break;
                 case "15753": //astrofacts
-                    textBox.text = "ASTROFACTS";
+                    textBox.text = "ASTROFACTZ";
                     PlayerPrefs.SetString("Current", "astrofacts");
                     Invoke("LoadKaboom", 1f);
                     //kaboom
                     break;
                 case "21989": //constellation
-                    textBox.text = "CONSTELLATION";
+                    textBox.text = "CONSTELLATION\nEXPLORATION";
                     PlayerPrefs.SetString("Current", "constellation");
                     Invoke("LoadMatching", 1f);
                     //matching
                     break;
                 case "95642": //mismatched
-                    textBox.text = "MISMATCHED";
+                    textBox.text = "MISMATCHED\nMAYHEM";
                     PlayerPrefs.SetString("Current", "mismatched");
                     Invoke("LoadFrogger", 1f);
                     //frogger
                     break;
                 case "34492": //cannon
-                    textBox.text = "CANNON";
+                    textBox.text = "CANNON BRAWL";
                     PlayerPrefs.SetString("Current", "cannon");
                     Invoke("LoadCircuit1", 1f);
                     //circuit
                     break;
                 case "08776": //rhythm
-                    textBox.text = "RHYTHM";
+                    textBox.text = "RHYTHM RUMBLE";
                     PlayerPrefs.SetString("Current", "rhythm");
                     Invoke("LoadFrogger", 1f);
                     //frogger
@@ -141,31 +141,26 @@ public class PinBehaviour : MonoBehaviour
 
     private void LoadCircuit1()
     {
-        print("CIRCUIT1");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 1");
         activated = true;
     }
     private void LoadCircuit2()
     {
-        print("CIRCUIT2");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Circuit Minigame 2");
         activated = true;
     }
     private void LoadFrogger()
     {
-        print("FROGGER");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger");
         activated = true;
     }
     private void LoadMatching()
     {
-        print("MATCHING");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Matching Minigame");
         activated = true;
     }
     private void LoadKaboom()
     {
-        print("KABOOM");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
         activated = true;
     }
