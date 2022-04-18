@@ -14,6 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject coin;
     public GameObject win;
     public AudioSource ScoreSound;
+    public AudioSource WinSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
             ScoreDisplay.text = score + "/" + threshold;
             if(score >= threshold)
             {
+                WinSound.Play();
                 Invoke("LaunchPage", 2f);
                 win.SetActive(true);
                 coin.SetActive(true);
