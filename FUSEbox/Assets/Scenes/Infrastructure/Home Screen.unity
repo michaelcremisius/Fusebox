@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: View all experiences!
+  m_Text: View all experiences
 --- !u!222 &843379385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter a code!
+  m_Text: Enter a code
 --- !u!222 &1534363380
 CanvasRenderer:
   m_ObjectHideFlags: 0
