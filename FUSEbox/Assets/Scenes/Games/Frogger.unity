@@ -3045,8 +3045,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Text
-      value: Move the frog to the other side by pressing down to win a prize and
-        learn more about Fuse!
+      value: Move the frog to the other side by pressing and holding to win a prize
+        and learn more about Fuse!
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Color.b
