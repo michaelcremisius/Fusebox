@@ -1736,6 +1736,7 @@ MonoBehaviour:
   MatchSound: {fileID: 1215825800}
   MissSound: {fileID: 2112291933}
   FlipSound: {fileID: 1987901762}
+  CoinParticles: {fileID: 5303283689790486408, guid: 2f4b7df88e4009d40a57932e0b233aa3, type: 3}
   selectedButton1: {fileID: 0}
   selectedButton2: {fileID: 0}
   coin: {fileID: 1845660555}

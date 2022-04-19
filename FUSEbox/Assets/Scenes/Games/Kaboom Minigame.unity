@@ -2570,6 +2570,7 @@ MonoBehaviour:
   win: {fileID: 798752446}
   ScoreSound: {fileID: 592057831}
   WinSound: {fileID: 1044658907}
+  CoinParticles: {fileID: 5303283689790486408, guid: 337ab64eefa093f428e552a03957f613, type: 3}
 --- !u!1 &2073697775
 GameObject:
   m_ObjectHideFlags: 0

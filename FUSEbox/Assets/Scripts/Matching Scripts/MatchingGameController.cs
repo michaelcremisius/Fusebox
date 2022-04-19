@@ -47,6 +47,7 @@ public class MatchingGameController : MonoBehaviour
     public AudioSource MatchSound;
     public AudioSource MissSound;
     public AudioSource FlipSound;
+    public GameObject CoinParticles;
 
     // Reference to the grid object
     private GameObject grid;
@@ -238,6 +239,7 @@ public class MatchingGameController : MonoBehaviour
         if(victory)
         {
             Invoke("LaunchPage",2f);
+            Instantiate(CoinParticles, new Vector3(0,6.48f,0),Quaternion.identity);
             win.SetActive(true);
             coin.SetActive(true);
             coin2.SetActive(true);

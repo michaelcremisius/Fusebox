@@ -15,6 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject win;
     public AudioSource ScoreSound;
     public AudioSource WinSound;
+    public GameObject CoinParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
                 Invoke("LaunchPage", 2f);
                 win.SetActive(true);
                 coin.SetActive(true);
+                Instantiate(CoinParticles, new Vector3(0, 8.45f, 0), Quaternion.identity);
             }
         }
 

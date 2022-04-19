@@ -35,6 +35,8 @@ public class CircuitGameController : MonoBehaviour
     public AudioSource turnSound;
     public AudioSource winSound;
 
+    public GameObject CoinParticles;
+
     private Color OnColor = new Color(1f, 1f, .6f, 1f);
     private Color OffColor = new Color(.54f, .54f, .54f, 1f);
 
@@ -97,7 +99,7 @@ public class CircuitGameController : MonoBehaviour
             PlayWinSound();
             Invoke("LaunchPage", 2f);
             win.SetActive(true);
-
+            Instantiate(CoinParticles,new Vector3(0,8.45f,0),Quaternion.identity);
         }
         //else if (twoJunctionsToFinish && requiredJunction && requiredJunction2) lightbulb.GetComponent<SpriteRenderer>().color = OnColor;
         else lightbulb.GetComponent<SpriteRenderer>().color = OffColor;

@@ -17,6 +17,7 @@ public class FrogBehaviour : MonoBehaviour
 
     public AudioSource winSound;
     public AudioSource loseSound; //TEMP: We can make this a set and choose a sound at random, but I'ven't the time currently
+    public GameObject WinParticles;
     // Start is called before the first frame update
     void Awake()
     {
@@ -62,6 +63,7 @@ public class FrogBehaviour : MonoBehaviour
                 winSound.Play();
                 win.SetActive(true);
                 coin.SetActive(true);
+                Instantiate(WinParticles, new Vector3(0,6.48f, 0), Quaternion.identity);
                 Invoke("LaunchPage", 2f);
             }
             scoreBoard.text = score.ToString();

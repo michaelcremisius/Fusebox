@@ -2263,6 +2263,7 @@ MonoBehaviour:
   startButton: {fileID: 1051712343}
   turnSound: {fileID: 1114253857}
   winSound: {fileID: 27110300}
+  CoinParticles: {fileID: 5303283689790486408, guid: 337ab64eefa093f428e552a03957f613, type: 3}
 --- !u!4 &637453580
 Transform:
   m_ObjectHideFlags: 0
