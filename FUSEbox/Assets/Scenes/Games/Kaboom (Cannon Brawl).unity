@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Text
-      value: Catch all the shields to win a prize and learn more about Fuse!
+      value: Catch all the cannonballs to win a prize and learn more about Fuse!
       objectReference: {fileID: 0}
     - target: {fileID: 3241735574809079313, guid: 45af6c4e6a31afe45aa4f1a905d79931, type: 3}
       propertyPath: m_Color.b
