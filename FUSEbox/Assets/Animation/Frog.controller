@@ -38,6 +38,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isMove
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DG
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -808276524677994305}
   m_Solo: 0
@@ -63,10 +66,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8695601560321140254}
-    m_Position: {x: 230, y: 30, z: 0}
+    m_Position: {x: 370, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -808276524677994305}
-    m_Position: {x: 330, y: 160, z: 0}
+    m_Position: {x: 370, y: -50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -114,6 +117,12 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isMove
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: DG
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

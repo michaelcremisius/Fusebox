@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 8b89808462e73ad4ba5379272d6a3f8f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7845819932227675993
+    second: Hippo Spread Sheet_0
+  - first:
+      213: -8065293186024115087
+    second: Hippo Spread Sheet_1
+  - first:
+      213: 3487461853665708906
+    second: Hippo Spread Sheet_2
+  - first:
+      213: -4120786532459188119
+    second: Hippo Spread Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +87,105 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hippo Spread Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 604
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9572c10d8a3f1ec60800000000000000
+      internalID: 7845819932227675993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hippo Spread Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 0
+        width: 604
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17477ad3492521090800000000000000
+      internalID: -8065293186024115087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hippo Spread Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 0
+        width: 604
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b487b1414f56030800000000000000
+      internalID: 3487461853665708906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hippo Spread Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 0
+        width: 604
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9607e894b7600d6c0800000000000000
+      internalID: -4120786532459188119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -24,6 +25,15 @@ public class EnemyBehaviour : MonoBehaviour
         startPos = transform.position;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         s_animator = gameObject.GetComponent<Animator>();
+
+        if(SceneManager.GetActiveScene().name.Contains("Cannon Brawl"))
+        {
+            s_animator.SetBool("CB", true);
+        }
+        if (SceneManager.GetActiveScene().name.Contains("Theia"))
+        {
+            s_animator.SetBool("Theia", true);
+        }
     }
     // Update is called once per frame
     void Update()

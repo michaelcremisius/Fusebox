@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -23,6 +24,11 @@ public class FrogBehaviour : MonoBehaviour
     {
         f_animator = gameObject.GetComponent<Animator>();
         f_animator.SetBool("isMove", false);
+
+        if (SceneManager.GetActiveScene().name.Contains("Disaster Golf"))
+        {
+            f_animator.SetBool("DG", true);
+        }
     }
     
     void Start()
