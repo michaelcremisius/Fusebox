@@ -96,8 +96,8 @@ public class PinBehaviour : MonoBehaviour
                 case "15753": //astrofacts
                     textBox.text = "ASTROFACTZ";
                     PlayerPrefs.SetString("Current", "astrofacts");
-                    Invoke("LoadKaboom", 1f);
-                    //kaboom
+                    Invoke("LoadCircuit2", 1f);
+                    //circuit 2
                     break;
                 case "21989": //constellation
                     textBox.text = "CONSTELLATION\nEXPLORATION";
@@ -127,7 +127,8 @@ public class PinBehaviour : MonoBehaviour
                 case "14412": //theia
                     textBox.text = "THEIA";
                     PlayerPrefs.SetString("Current", "theia");
-                    Invoke("LoadCircuit2", 1f);
+                    //Invoke("LoadCircuit2", 1f);
+                    Invoke("LoadPlant", 1f);
                     //circuit
                     break;
                 default:
@@ -173,6 +174,11 @@ public class PinBehaviour : MonoBehaviour
     private void LoadCannon()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom (Cannon Brawl)");
+        activated = true;
+    }
+    private void LoadPlant()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom (Theia)");
         activated = true;
     }
     private void Update()

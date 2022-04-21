@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Team Scenes/Meditation Station.unity
     guid: 6dd525e7ea316a3418ec3fb1ec8b454e
   - enabled: 1
+    path: Assets/Scenes/Games/Kaboom (Theia).unity
+    guid: 09eb770ba81f1184894a3632952d154d
+  - enabled: 1
     path: Assets/Scenes/Team Scenes/Mismatch Mayhem.unity
     guid: 87976d77503952a4085c5a3eecddd7cc
   - enabled: 1
