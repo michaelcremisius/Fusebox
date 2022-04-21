@@ -84,7 +84,7 @@ public class PinBehaviour : MonoBehaviour
                 case "71266": //disaster
                     textBox.text = "DISASTER GOLF";
                     PlayerPrefs.SetString("Current", "disaster");
-                    Invoke("LoadFrogger", 1f);
+                    Invoke("LoadDisaster", 1f);
                     //frogger
                     break;
                 case "80232": //bellissimo
@@ -108,13 +108,14 @@ public class PinBehaviour : MonoBehaviour
                 case "95642": //mismatched
                     textBox.text = "MISMATCHED\nMAYHEM";
                     PlayerPrefs.SetString("Current", "mismatched");
-                    Invoke("LoadFrogger", 1f);
-                    //frogger
+                    Invoke("LoadCircuit1", 1f);
+                    //Circuit
                     break;
                 case "34492": //cannon
                     textBox.text = "CANNON BRAWL";
                     PlayerPrefs.SetString("Current", "cannon");
-                    Invoke("LoadCircuit1", 1f);
+                    //Invoke("LoadCircuit1", 1f);
+                    Invoke("LoadCannon", 1f);
                     //circuit
                     break;
                 case "08776": //rhythm
@@ -164,7 +165,16 @@ public class PinBehaviour : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom Minigame");
         activated = true;
     }
-
+    private void LoadDisaster()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Frogger (Disaster Golf)");
+        activated = true;
+    }
+    private void LoadCannon()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Kaboom (Cannon Brawl)");
+        activated = true;
+    }
     private void Update()
     {
         TickDown();

@@ -9,17 +9,26 @@ public class FrogGameController : MonoBehaviour
     public Button startButton;
     public Text startText;
     public GameObject FreezeMenu;
+    private bool hasStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+        print("I wanna take a picture");
         player = GameObject.Find("Frog");   
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(hasStarted)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
         TrackTouch();
     }
     
@@ -38,8 +47,7 @@ public class FrogGameController : MonoBehaviour
 
     public void StartTime()
     {
-
-        Time.timeScale = 1;
+        hasStarted = true;
         startButton.gameObject.SetActive(false);
         startText.gameObject.SetActive(false);
         FreezeMenu.SetActive(false);
