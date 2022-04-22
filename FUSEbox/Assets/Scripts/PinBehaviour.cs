@@ -11,6 +11,11 @@ public class PinBehaviour : MonoBehaviour
     private float countDown;
     public float maxCountDown;
     public AudioSource ErrorSound;
+    public AudioSource SuccessSound;
+    public AudioSource Click;
+    public AudioSource Incorrect;
+    public AudioSource DeleteSound;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -29,6 +34,11 @@ public class PinBehaviour : MonoBehaviour
                 pin += num;
                 FillPin();
                 textBox.text = pin;
+                Click.Play();
+            }
+            else
+            {
+                Incorrect.Play();
             }
         }
     }
@@ -44,6 +54,7 @@ public class PinBehaviour : MonoBehaviour
             }
             FillPin();
             textBox.text = pin;
+            DeleteSound.Play();
         }
 
     }
@@ -73,42 +84,49 @@ public class PinBehaviour : MonoBehaviour
                     textBox.text = "MEDITATION\nSTATION";
                     PlayerPrefs.SetString("Current", "meditation");
                     Invoke("LoadKaboom", 1f);
+                    SuccessSound.Play();
                     //kaboom
                     break;
                 case "33310": //feline
                     textBox.text = "END OF\nFELINE";
                     PlayerPrefs.SetString("Current", "feline");
                     Invoke("LoadMatching", 1f);
+                    SuccessSound.Play();
                     //matching
                     break;
                 case "71266": //disaster
                     textBox.text = "DISASTER GOLF";
                     PlayerPrefs.SetString("Current", "disaster");
                     Invoke("LoadDisaster", 1f);
+                    SuccessSound.Play();
                     //frogger
                     break;
                 case "80232": //bellissimo
                     textBox.text = "BELLISSIMO";
                     PlayerPrefs.SetString("Current", "bellissimo");
                     Invoke("LoadCircuit1", 1f);
+                    SuccessSound.Play();
                     //circuit
                     break;
                 case "15753": //astrofacts
                     textBox.text = "ASTROFACTZ";
                     PlayerPrefs.SetString("Current", "astrofacts");
                     Invoke("LoadCircuit2", 1f);
+                    SuccessSound.Play();
                     //circuit 2
                     break;
                 case "21989": //constellation
                     textBox.text = "CONSTELLATION\nEXPLORATION";
                     PlayerPrefs.SetString("Current", "constellation");
                     Invoke("LoadMatching", 1f);
+                    SuccessSound.Play();
                     //matching
                     break;
                 case "95642": //mismatched
                     textBox.text = "MISMATCHED\nMAYHEM";
                     PlayerPrefs.SetString("Current", "mismatched");
                     Invoke("LoadCircuit1", 1f);
+                    SuccessSound.Play();
                     //Circuit
                     break;
                 case "34492": //cannon
@@ -116,12 +134,14 @@ public class PinBehaviour : MonoBehaviour
                     PlayerPrefs.SetString("Current", "cannon");
                     //Invoke("LoadCircuit1", 1f);
                     Invoke("LoadCannon", 1f);
+                    SuccessSound.Play();
                     //circuit
                     break;
                 case "08776": //rhythm
                     textBox.text = "RHYTHM RUMBLE";
                     PlayerPrefs.SetString("Current", "rhythm");
                     Invoke("LoadFrogger", 1f);
+                    SuccessSound.Play();
                     //frogger
                     break;
                 case "14412": //theia
@@ -129,6 +149,7 @@ public class PinBehaviour : MonoBehaviour
                     PlayerPrefs.SetString("Current", "theia");
                     //Invoke("LoadCircuit2", 1f);
                     Invoke("LoadPlant", 1f);
+                    SuccessSound.Play();
                     //circuit
                     break;
                 default:
