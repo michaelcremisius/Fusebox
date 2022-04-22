@@ -14,20 +14,26 @@ public class GameController : MonoBehaviour
     public GameObject haze;
 
     public AudioSource MissSound;
-
+    private bool isStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
         //lives = 3;
-        Time.timeScale = 0;
         livesDisplay.text = lives + "";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (isStart)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -49,7 +55,7 @@ public class GameController : MonoBehaviour
 
     public void StartTime()
     {
-        Time.timeScale = 1;
+        isStart = true;
         startButton.gameObject.SetActive(false);
         startText.gameObject.SetActive(false);
         haze.SetActive(false);
