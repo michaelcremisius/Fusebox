@@ -191,7 +191,7 @@ public class MatchingGameController : MonoBehaviour
             selectedButton1.ChangeButtonColor(Color.red);
             selectedButton2.ChangeButtonColor(Color.red);
 
-            Invoke("ResetButtons", 0.2f);
+            Invoke("ResetButtons", 0.75f);
         }
 
         // Advance the game state
