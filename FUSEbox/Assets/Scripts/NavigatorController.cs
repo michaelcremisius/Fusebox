@@ -6,6 +6,8 @@ public class NavigatorController : MonoBehaviour
 {
 
     public bool isTeam;
+    public bool isPassport;
+    public AudioSource CoinClick;
     private void Start()
     { 
         Time.timeScale = 1;
@@ -25,6 +27,10 @@ public class NavigatorController : MonoBehaviour
         }
         else
         {
+            if(isPassport)
+            {
+                CoinClick.Play();
+            }
             UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
         }
     }
