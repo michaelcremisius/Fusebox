@@ -3798,6 +3798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTeam: 1
+  isPassport: 0
+  CoinClick: {fileID: 0}
 --- !u!4 &585153514
 Transform:
   m_ObjectHideFlags: 0
@@ -4175,7 +4177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 338de845e320441e787608e5eb54ce36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80427cb12044dfc499876ce580a7ec60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10128,7 +10130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 338de845e320441e787608e5eb54ce36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80427cb12044dfc499876ce580a7ec60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
